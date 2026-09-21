@@ -25,7 +25,7 @@ variables,
 $$
 X_{ij}=Y_{ij}^{+}-Y_{ij}^{-},
 \qquad
-Y_{ij}^{\pm}\sim\operatorname{NB}\left(
+Y_{ij}^{\pm}\sim\mathrm{NB}\left(
 \frac{\lambda_{ij}^{\pm}}{\phi-1},
 \frac{1}{\phi}\right),
 $$
@@ -35,7 +35,7 @@ where $\phi > 1$. Consequently,
 $$
 \mathbb{E}[X_{ij}]=\lambda_{ij}^{+}-\lambda_{ij}^{-},
 \qquad
-\operatorname{Var}(X_{ij})=\phi(\lambda_{ij}^{+}+\lambda_{ij}^{-}).
+\mathrm{Var}(X_{ij})=\phi(\lambda_{ij}^{+}+\lambda_{ij}^{-}).
 $$
 
 All simulated values are integers in the monetary unit chosen by the user.
