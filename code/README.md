@@ -1,6 +1,6 @@
 # ODSkellam core functions
 
-`odskellam.R` is a small, dependency-free implementation of the model layer of
+`ODSkellam.R` is a small, dependency-free implementation of the model layer of
 the over-dispersed Skellam (ODS) reserving model. It is intended to be sourced
 by users who want to build their own fitting, calibration, and reserving
 workflow.
@@ -44,7 +44,7 @@ The value of `phi` is therefore unit-dependent.
 ## Quick start
 
 ```r
-source("odskellam.R")
+source("ODSkellam.R")
 
 alpha <- c(100, 120)
 beta_plus <- c(0.8, 0.3)
