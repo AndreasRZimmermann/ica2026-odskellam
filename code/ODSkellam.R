@@ -169,8 +169,16 @@ r_ods_reserve <- function(n, alpha, beta_plus, beta_minus, phi, future_mask) {
 
   lambda_plus <- sum(parameters$lambda_plus[future_mask])
   lambda_minus <- sum(parameters$lambda_minus[future_mask])
-  plus <- .ods_rnbinom(n, lambda_plus, phi)
-  minus <- .ods_rnbinom(n, lambda_minus, phi)
+  plus <- if (lambda_plus > 0) {
+    rnbinom(n, size = lambda_plus / (phi - 1), prob = 1 / phi)
+  } else {
+    numeric(n)
+  }
+  minus <- if (lambda_minus > 0) {
+    rnbinom(n, size = lambda_minus / (phi - 1), prob = 1 / phi)
+  } else {
+    numeric(n)
+  }
 
-  as.numeric(plus[, 1L] - minus[, 1L])
+  as.numeric(plus - minus)
 }
